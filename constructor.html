@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/constructor.css"/>
+    <title>Consructor</title>
+</head>
+<body>
+        <div class="formAccount">               
+               <!--  <form onsubmit='return make_json(this);'> -->
+                <form method="POST" action="/constructor">
+                    <div>
+                        <label for="number">Номер счета</label>
+                        <input type="text" name="number" id="number" placeholder="Номер счета" />
+                    </div>
+
+                    <div>
+                        <label for="typeAccount">Тип счета</label>
+                       <!--  <input type="text" name="typeAccount" id="typeAccount" placeholder="Тип счета" /> -->
+                        <select id="select" onclick="check()">
+                        <option label="" value="1" selected ></option>
+                        <option value="calculated">расчетный</option>                                
+                        <option value="deposit">накопительный</option>
+                </select>
+                    </div>
+
+                    <div>
+                        <label for="pin">PIN</label>
+                        <input type="text" name="pin" id="pin" placeholder="PIN" />
+                    </div>
+
+                    <div>
+                        <label for="balance">Баланс</label>
+                        <input type="text" name="balance" id="balance" placeholder="Баланс" />
+                    </div>
+
+                    <div>
+                        <label for="dataCreation">Дата создания</label>
+                        <input type="text" name="dataCreation" id="dataCreation" placeholder="Дата создания" />
+                    </div>
+
+                    <div>
+                        <label for="user">Получатель</label>
+                        <input type="text" name="user" id="user" placeholder="Получатель" />
+                    </div>
+
+                    <div>
+                        <label for="userType">Тип получателя</label>
+                        <!-- <input type="text" name="userType" id="userType" placeholder="Тип получателя" /> -->
+                        <select id="typeUser">
+                                <option label="" value="1" selected ></option>
+                                <option value="active">активный</option>                                
+                                <option value="locked">заблокированный</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="historyRevision">История</label>
+                       <!--  <input type="text" name="historyRevision" id="historyRevision" placeholder="История" /> -->
+                       <textarea name="historyRevision" cols="26" rows="4" id="historyRevision" placeholder="История"></textarea>
+                    </div>
+                    
+                    <div  id="divCostService">
+                        <label for="costService">Стоимость обслуживания</label>
+                        <input type="text" name="costService" id="costService" placeholder="Стоимость обслуживания" />
+                    </div>
+
+                    <div id="divUserSystemType">
+                        <label for="userSystemType">Пользовательская система</label>
+                        <input type="text" name="userSystemType" placeholder="Пользовательская система" />
+                    </div>
+
+                    <div id="divTime">
+                        <label for="time">Срок(дн)</label>
+                        <input type="text" name="time" id="time" placeholder="Срок(дн)" />
+                    </div>
+
+                    <div id="divPercent">
+                        <label for="percent">Проценты по вкладу</label>
+                        <input type="text" name="percent" id="percent" placeholder="Проценты по вкладу" />
+                    </div>
+
+                    <div id="divPeriod">
+                        <label for="period">Истек ли срок?</label>
+                        <input type="text" name="period" id="period" placeholder="Истек ли срок?" />
+                    </div>                    
+                    
+                    <p class="clearfix">
+                            <input type="submit" name="submit"
+                                value="Сохранить"/>
+                        <!-- <button type="submit" class="btn">Добавить</button> -->
+                    </p>
+                </form>
+        </div>
+
+        <pre id="output">
+            Fill the above form to make json ...
+        </pre>
+        <script src="./js/checkAccount.js"></script>
+        <script src="./js/make_json.js"></script>
+        <!-- <script src="./js/addRow.js"></script>  -->        
+</body>
+</html>

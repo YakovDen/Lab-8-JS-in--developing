@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" type="text/css" href="style/main.css"> 
+    
+    <title>BankAccount</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="create" onclick="createAccount()">Создать</div>
+        <table id='myTable'>
+            <tbody>
+                <tr>
+                    <!-- <td>№</td> -->
+                    <td>Номер счета</td>
+                    <td>Тип счета</td>
+                    <td>PIN</td>
+                    <td>Баланс</td>
+                    <td>Дата создания</td>
+                    <td>Получатель</td>
+                    <td>Тип получателя</td>
+                    <td>История</td>
+                    <!-- <td>Стоимость обслуживания</td>
+                    <td>Вид пользовательской системы</td>
+                    <td>Срок(дн)</td>
+                    <td>Проценты по вкладу</td>
+                    <td>Истек ли срок?</td> -->
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" onclick="addRow('myTable')">Добавить</button>
+    </div> 
+    
+        
+
+
+
+    <script src="./js/createAccount.js"></script>     
+    <script src="./js/class.js"></script>  
+    <script src="./js/addRow.js"></script>
+</body>
+</html>
